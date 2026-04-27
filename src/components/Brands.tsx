@@ -3,26 +3,29 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Sparkles, Heart, TrendingUp } from "lucide-react";
-
-const features = [
-  {
-    icon: Sparkles,
-    title: "Enhance customer insights",
-    body: "Gather rich, first-party customer data through complimentary protection — building an address book your CRM has been missing.",
-  },
-  {
-    icon: Heart,
-    title: "Foster customer loyalty",
-    body: "Offer global coverage that safeguards your customers anywhere. Build trust and create relationships that endure beyond the sale.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Drive revenue growth",
-    body: "Boost in-store walk-ins, lift conversion rates, and unlock new upselling and cross-selling opportunities through aftersales touchpoints.",
-  },
-];
+import { useI18n } from "./LanguageProvider";
 
 export function Brands() {
+  const { t } = useI18n();
+
+  const features = [
+    {
+      icon: Sparkles,
+      title: t.brands.feature1Title,
+      body: t.brands.feature1Body,
+    },
+    {
+      icon: Heart,
+      title: t.brands.feature2Title,
+      body: t.brands.feature2Body,
+    },
+    {
+      icon: TrendingUp,
+      title: t.brands.feature3Title,
+      body: t.brands.feature3Body,
+    },
+  ];
+
   return (
     <section id="features" className="py-24 lg:py-36 bg-cream relative">
       <div className="container max-w-6xl">
@@ -36,8 +39,8 @@ export function Brands() {
               className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elev"
             >
               <Image
-                src="https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&q=92&w=2000"
-                alt="Designer handbag and watch flat-lay"
+                src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&q=92&w=1200"
+                alt={t.brands.titleAccent}
                 fill
                 quality={92}
                 sizes="(min-width: 1024px) 40vw, 90vw"
@@ -53,15 +56,16 @@ export function Brands() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
             >
-              <span className="eyebrow">For brands</span>
+              <span className="eyebrow">{t.brands.eyebrow}</span>
               <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.05] text-ink">
-                An end-to-end{" "}
-                <span className="italic text-primary">luxury</span> experience.
+                {t.brands.titleA}
+                <span className="italic text-primary">
+                  {t.brands.titleAccent}
+                </span>
+                {t.brands.titleB}
               </h2>
               <p className="mt-6 max-w-xl text-lg text-ink-soft leading-relaxed">
-                Elevate your aftersales with world-class service. AION
-                integrates with your customer journey — invisible to your
-                brand, indispensable to your client.
+                {t.brands.description}
               </p>
             </motion.div>
 

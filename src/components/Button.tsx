@@ -14,7 +14,7 @@ const variants: Record<Variant, string> = {
     "border border-ink/15 text-ink hover:border-primary hover:text-primary",
   ghost: "text-ink hover:text-primary",
   light:
-    "bg-white text-ink-DEFAULT hover:bg-cream border border-border shadow-card",
+    "bg-white text-[hsl(24_10%_10%)] hover:bg-[hsl(36_35%_96%)] border border-border shadow-card",
 };
 
 type CommonProps = {

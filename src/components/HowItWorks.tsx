@@ -1,31 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const steps = [
-  {
-    n: "01",
-    title: "Coverage at checkout",
-    body: "Delight your customers with complimentary coverage included at the moment of purchase — a quiet, premium gesture.",
-  },
-  {
-    n: "02",
-    title: "Simple online activation",
-    body: "Activation in just a few clicks. Your customer, their treasure, protected — with no friction.",
-  },
-  {
-    n: "03",
-    title: "Effortless claims",
-    body: "Submit claims through an intuitive platform with photographic evidence and instant status updates.",
-  },
-  {
-    n: "04",
-    title: "Dedicated assistance",
-    body: "Personalized support from our expert team — concierge-grade response, available wherever your client is.",
-  },
-];
+import { useI18n } from "./LanguageProvider";
 
 export function HowItWorks() {
+  const { t } = useI18n();
+
+  const steps = [
+    { n: "01", title: t.howItWorks.s1Title, body: t.howItWorks.s1Body },
+    { n: "02", title: t.howItWorks.s2Title, body: t.howItWorks.s2Body },
+    { n: "03", title: t.howItWorks.s3Title, body: t.howItWorks.s3Body },
+    { n: "04", title: t.howItWorks.s4Title, body: t.howItWorks.s4Body },
+  ];
+
   return (
     <section id="how-it-works" className="py-24 lg:py-36 bg-background">
       <div className="container max-w-6xl">
@@ -36,14 +23,16 @@ export function HowItWorks() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <span className="eyebrow">How it works</span>
+            <span className="eyebrow">{t.howItWorks.eyebrow}</span>
             <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.05] text-ink">
-              From checkout to claim,{" "}
-              <span className="italic text-primary">effortless</span>.
+              {t.howItWorks.titleA}
+              <span className="italic text-primary">
+                {t.howItWorks.titleAccent}
+              </span>
+              {t.howItWorks.titleB}
             </h2>
             <p className="mt-6 text-lg text-ink-soft leading-relaxed">
-              A four-step journey designed with the precision your brand
-              demands and the simplicity your customer expects.
+              {t.howItWorks.description}
             </p>
           </motion.div>
         </div>

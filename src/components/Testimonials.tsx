@@ -1,29 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const quotes = [
-  {
-    quote:
-      "This is genius. We had so many complaints from customers paying for repairs — AION solved it overnight.",
-    name: "Jewelry Brand",
-    role: "Chief Marketing Officer",
-  },
-  {
-    quote:
-      "For a luxury furniture brand we advised, introducing AION's extended warranty increased registration rates three-fold.",
-    name: "Luxury Brands Advisor",
-    role: "Senior Partner",
-  },
-  {
-    quote:
-      "I’ve worked in this industry for decades — I’ve never seen anything quite this effective.",
-    name: "Fashion Brand",
-    role: "Operations Manager",
-  },
-];
+import { useI18n } from "./LanguageProvider";
 
 export function Testimonials() {
+  const { t } = useI18n();
+
+  const quotes = [
+    { quote: t.testimonials.q1Quote, name: t.testimonials.q1Name, role: t.testimonials.q1Role },
+    { quote: t.testimonials.q2Quote, name: t.testimonials.q2Name, role: t.testimonials.q2Role },
+    { quote: t.testimonials.q3Quote, name: t.testimonials.q3Name, role: t.testimonials.q3Role },
+  ];
+
   return (
     <section id="testimonials" className="py-24 lg:py-36 bg-background">
       <div className="container max-w-6xl">
@@ -34,10 +22,13 @@ export function Testimonials() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
           >
-            <span className="eyebrow">Voices from the industry</span>
+            <span className="eyebrow">{t.testimonials.eyebrow}</span>
             <h2 className="mt-4 font-serif text-4xl sm:text-5xl lg:text-[3.5rem] leading-[1.05] text-ink">
-              Whispered in{" "}
-              <span className="italic text-primary">private rooms</span>.
+              {t.testimonials.titleA}
+              <span className="italic text-primary">
+                {t.testimonials.titleAccent}
+              </span>
+              {t.testimonials.titleB}
             </h2>
           </motion.div>
         </div>

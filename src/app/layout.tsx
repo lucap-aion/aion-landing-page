@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
+import { cookies } from "next/headers";
 import "./globals.css";
+import { ThemeProvider, type Theme } from "@/components/ThemeProvider";
+import { LanguageProvider } from "@/components/LanguageProvider";
+import type { Locale } from "@/lib/i18n/dictionaries";
 
 const display = Playfair_Display({
   subsets: ["latin"],
@@ -52,12 +56,34 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.ico" },
 };
 
+const noFlashScript = `(function(){try{var t=document.cookie.match(/(?:^|; )aion_theme=(light|dark)/);var s=t?t[1]:(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');if(s==='dark')document.documentElement.classList.add('dark');document.documentElement.style.colorScheme=s;}catch(e){}})();`;
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const store = cookies();
+  const themeCookie = store.get("aion_theme")?.value;
+  const initialTheme: Theme = themeCookie === "dark" ? "dark" : "light";
+  const localeCookie = store.get("aion_locale")?.value;
+  const initialLocale: Locale = localeCookie === "it" ? "it" : "en";
+
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body className="bg-background text-foreground antialiased">{children}</body>
+    <html
+      lang={initialLocale}
+      className={`${display.variable} ${body.variable}${initialTheme === "dark" ? " dark" : ""}`}
+      style={{ colorScheme: initialTheme }}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: noFlashScript }} />
+      </head>
+      <body className="bg-background text-foreground antialiased">
+        <ThemeProvider initialTheme={initialTheme}>
+          <LanguageProvider initialLocale={initialLocale}>
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

@@ -17,6 +17,30 @@
   --ink: 24 10% 10%;
   --ink-soft: 24 8% 32%;
   --cream: 36 35% 96%;
+
+  color-scheme: light;
+}
+
+:root.dark {
+  --background: 28 14% 8%;
+  --foreground: 36 28% 92%;
+  --muted: 28 10% 14%;
+  --muted-foreground: 36 12% 62%;
+  --border: 28 10% 20%;
+
+  /* primary-light stays a light cream in dark mode because it's used as a
+     foreground accent on dark backgrounds (eyebrows, italics on the warm
+     CTA card, icon tiles). primary-dark stays the warm brown brand accent. */
+  --primary: 36 55% 60%;
+  --primary-dark: 32 40% 24%;
+  --primary-light: 36 55% 88%;
+  --primary-foreground: 28 14% 8%;
+
+  --ink: 36 28% 92%;
+  --ink-soft: 36 12% 68%;
+  --cream: 28 12% 12%;
+
+  color-scheme: dark;
 }
 
 html, body {
@@ -48,6 +72,10 @@ h1, h2, h3, h4 {
 
 .gradient-edge {
   background: radial-gradient(120% 80% at 50% 0%, hsl(var(--primary-light) / 0.6) 0%, hsl(var(--background)) 60%);
+}
+
+.dark .gradient-edge {
+  background: radial-gradient(120% 80% at 50% 0%, hsl(var(--primary) / 0.18) 0%, hsl(var(--background)) 60%);
 }
 
 .noise::before {
