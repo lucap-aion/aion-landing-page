@@ -64,29 +64,32 @@ export function Hero() {
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elev">
               <Image
-                src="https://images.unsplash.com/photo-1606293459339-aa5d34a7b0e1?auto=format&fit=crop&q=85&w=1200"
-                alt="Luxury watch on velvet display"
+                src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&q=92&w=2400"
+                alt="Luxury timepiece resting on a leather-bound book"
                 fill
                 priority
-                sizes="(min-width: 1024px) 40vw, 90vw"
+                quality={92}
+                sizes="(min-width: 1024px) 42vw, 92vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/30 via-transparent to-transparent" />
             </div>
             <div className="absolute -bottom-8 -left-8 hidden sm:block w-48 h-48 rounded-2xl overflow-hidden shadow-elev border-4 border-background">
               <Image
-                src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&q=85&w=600"
-                alt="Luxury leather handbag detail"
+                src="https://images.unsplash.com/photo-1591348278863-a8fb3887e2aa?auto=format&fit=crop&q=92&w=1200"
+                alt="Designer handbags on neutral linen"
                 fill
+                quality={92}
                 sizes="200px"
                 className="object-cover"
               />
             </div>
             <div className="absolute -top-6 -right-6 hidden sm:block w-32 h-32 rounded-2xl overflow-hidden shadow-elev border-4 border-background">
               <Image
-                src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=85&w=400"
-                alt="Diamond ring close-up"
+                src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=92&w=800"
+                alt="Solitaire diamond ring on a black box"
                 fill
+                quality={92}
                 sizes="128px"
                 className="object-cover"
               />

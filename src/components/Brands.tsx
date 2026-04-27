@@ -36,9 +36,10 @@ export function Brands() {
               className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-elev"
             >
               <Image
-                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=85&w=1200"
-                alt="Luxury boutique customer experience"
+                src="https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&q=92&w=2000"
+                alt="Designer handbag and watch flat-lay"
                 fill
+                quality={92}
                 sizes="(min-width: 1024px) 40vw, 90vw"
                 className="object-cover"
               />

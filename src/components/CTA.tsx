@@ -16,11 +16,12 @@ export function CTA() {
           transition={{ duration: 0.8 }}
           className="relative rounded-[2rem] overflow-hidden bg-primary-dark text-white shadow-elev"
         >
-          <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 opacity-25">
             <Image
-              src="https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&q=85&w=1800"
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=92&w=2400"
               alt=""
               fill
+              quality={92}
               sizes="100vw"
               className="object-cover"
             />

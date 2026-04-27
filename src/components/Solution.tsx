@@ -10,24 +10,24 @@ const solutions = [
     title: "Comprehensive coverage",
     body: "Partnered with leading global insurers to cover theft and accidental damage — wherever your customers travel.",
     image:
-      "https://images.unsplash.com/photo-1620625515032-6ed0c1790c75?auto=format&fit=crop&q=85&w=1200",
-    alt: "Luxury timepiece on dark velvet",
+      "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&q=92&w=1800",
+    alt: "Layered fine gold chain necklaces",
   },
   {
     icon: Layers,
     title: "White-label platform",
     body: "A customisable, omnichannel solution that integrates seamlessly into your brand — across boutique, web, and concierge.",
     image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=85&w=1200",
-    alt: "Modern brand boutique interior",
+      "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&q=92&w=1800",
+    alt: "Refined jewelry editorial portrait",
   },
   {
     icon: BarChart3,
     title: "Actionable insights",
     body: "Real-time intelligence on customer satisfaction, retention trends, and service requests — reported the way your team works.",
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=85&w=1200",
-    alt: "Analytics dashboard on screen",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=92&w=1800",
+    alt: "Gold chain pendants on a neutral surface",
   },
 ];
 
@@ -73,6 +73,7 @@ export function Solution() {
                   src={s.image}
                   alt={s.alt}
                   fill
+                  quality={92}
                   sizes="(min-width: 1024px) 33vw, 90vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-[1.4s] ease-out"
                 />
