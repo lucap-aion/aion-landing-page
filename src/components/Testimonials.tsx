@@ -12,6 +12,11 @@ export function Testimonials() {
     { quote: t.testimonials.q3Quote, name: t.testimonials.q3Name, role: t.testimonials.q3Role },
   ];
 
+  const verified = [
+    { quote: t.testimonials.v1Quote, role: t.testimonials.v1Role },
+    { quote: t.testimonials.v2Quote, role: t.testimonials.v2Role },
+  ];
+
   return (
     <section id="testimonials" className="py-24 lg:py-36 bg-background">
       <div className="container max-w-6xl">
@@ -59,6 +64,43 @@ export function Testimonials() {
                     {q.role}
                   </div>
                 ) : null}
+              </figcaption>
+            </motion.figure>
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.8 }}
+          className="mt-24 lg:mt-32 max-w-2xl mx-auto text-center"
+        >
+          <span className="eyebrow">{t.testimonials.verifiedEyebrow}</span>
+          <h3 className="mt-4 font-serif text-3xl sm:text-4xl leading-[1.1] text-ink">
+            {t.testimonials.verifiedTitle}
+            <span className="italic text-primary">
+              {t.testimonials.verifiedTitleAccent}
+            </span>
+            {t.testimonials.verifiedTitleTail}
+          </h3>
+        </motion.div>
+
+        <div className="mt-12 grid md:grid-cols-2 gap-px bg-border border-y border-border max-w-4xl mx-auto">
+          {verified.map((v, i) => (
+            <motion.figure
+              key={v.quote}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="bg-background py-10 lg:py-12 px-8 md:first:pl-0 md:last:pr-0"
+            >
+              <blockquote className="font-serif text-ink text-xl lg:text-[1.4rem] leading-snug italic">
+                &ldquo;{v.quote}&rdquo;
+              </blockquote>
+              <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-ink-soft">
+                {v.role}
               </figcaption>
             </motion.figure>
           ))}

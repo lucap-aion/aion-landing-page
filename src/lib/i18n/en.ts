@@ -182,6 +182,15 @@ export const en = {
       "Offering aftercare to luxury customers is the most effective lever to activate repurchase. This is guaranteed with AION.",
     q3Name: "Retail Director",
     q3Role: "",
+    verifiedEyebrow: "Verified platform feedback",
+    verifiedTitle: "Words from real ",
+    verifiedTitleAccent: "AION clients",
+    verifiedTitleTail: ".",
+    v1Quote:
+      "The service is a refined attention given to the client, who feels even more protected after the sale.",
+    v1Role: "Verified client · Italy",
+    v2Quote: "Excellence in service and courtesy.",
+    v2Role: "Verified client · Italy",
   },
 
   faq: {

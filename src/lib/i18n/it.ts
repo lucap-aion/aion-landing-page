@@ -184,6 +184,15 @@ export const it: typeof en = {
       "Offrire aftercare ai clienti del lusso è la leva più efficace per attivare il riacquisto. AION lo garantisce.",
     q3Name: "Direttore Retail",
     q3Role: "",
+    verifiedEyebrow: "Feedback verificati dalla piattaforma",
+    verifiedTitle: "Dalle parole dei ",
+    verifiedTitleAccent: "clienti AION",
+    verifiedTitleTail: ".",
+    v1Quote:
+      "Il servizio offerto è un'attenzione riservata al cliente, che si sente tutelato ancor di più nel post-vendita.",
+    v1Role: "Cliente verificato · Italia",
+    v2Quote: "Eccellenza nel servizio e cortesia.",
+    v2Role: "Cliente verificato · Italia",
   },
 
   faq: {
