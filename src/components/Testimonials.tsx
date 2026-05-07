@@ -54,9 +54,11 @@ export function Testimonials() {
               </blockquote>
               <figcaption className="mt-6 pt-6 border-t border-border">
                 <div className="font-serif text-lg text-ink">{q.name}</div>
-                <div className="text-xs uppercase tracking-[0.14em] text-ink-soft mt-1">
-                  {q.role}
-                </div>
+                {q.role ? (
+                  <div className="text-xs uppercase tracking-[0.14em] text-ink-soft mt-1">
+                    {q.role}
+                  </div>
+                ) : null}
               </figcaption>
             </motion.figure>
           ))}

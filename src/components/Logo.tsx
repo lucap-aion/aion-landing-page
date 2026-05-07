@@ -21,7 +21,11 @@ export function Logo({ light = false }: { light?: boolean }) {
         width={1197}
         height={344}
         priority
-        className={`h-7 w-auto lg:h-8 ${inverted ? "invert brightness-0" : ""}`}
+        className={`h-7 w-auto lg:h-8 ${
+          inverted
+            ? "brightness-0 invert-[.94]"
+            : "brightness-0 invert-[.14]"
+        }`}
       />
     </Link>
   );

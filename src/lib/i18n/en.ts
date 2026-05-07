@@ -175,13 +175,13 @@ export const en = {
     q1Name: "Jewelry Brand",
     q1Role: "Chief Marketing Officer",
     q2Quote:
-      "For a luxury furniture brand we advised, introducing AION's extended warranty increased registration rates three-fold.",
-    q2Name: "Luxury Brands Advisor",
-    q2Role: "Senior Partner",
+      "For a luxury brand we advised, introducing extended warranty increased registration rates double digit. AION could lead the same benefit.",
+    q2Name: "Luxury Advisor",
+    q2Role: "",
     q3Quote:
-      "I've worked in this industry for decades — I've never seen anything quite this effective.",
-    q3Name: "Fashion Brand",
-    q3Role: "Operations Manager",
+      "Offering aftercare to luxury customers is the most effective lever to activate repurchase. This is guaranteed with AION.",
+    q3Name: "Retail Director",
+    q3Role: "",
   },
 
   faq: {

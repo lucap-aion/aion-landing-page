@@ -177,13 +177,13 @@ export const it: typeof en = {
     q1Name: "Brand di gioielleria",
     q1Role: "Chief Marketing Officer",
     q2Quote:
-      "Per un brand di arredamento di lusso che abbiamo seguito, l'introduzione della garanzia estesa di AION ha triplicato i tassi di registrazione.",
+      "Per un brand di lusso che abbiamo seguito, l'introduzione della garanzia estesa ha aumentato i tassi di registrazione a doppia cifra. AION può offrire lo stesso beneficio.",
     q2Name: "Consulente Brand di Lusso",
-    q2Role: "Senior Partner",
+    q2Role: "",
     q3Quote:
-      "Lavoro in questo settore da decenni — non avevo mai visto qualcosa di così efficace.",
-    q3Name: "Brand di moda",
-    q3Role: "Operations Manager",
+      "Offrire aftercare ai clienti del lusso è la leva più efficace per attivare il riacquisto. AION lo garantisce.",
+    q3Name: "Direttore Retail",
+    q3Role: "",
   },
 
   faq: {

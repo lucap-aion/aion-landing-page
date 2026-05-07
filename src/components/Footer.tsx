@@ -20,7 +20,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[hsl(24_10%_8%)] text-white/80 pt-20 pb-10">
+    <footer className="bg-[hsl(28_6%_16%)] text-white/80 pt-20 pb-10">
       <div className="container max-w-6xl">
         <div className="grid md:grid-cols-12 gap-10 lg:gap-16">
           <div className="md:col-span-5">
