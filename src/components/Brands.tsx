@@ -43,7 +43,7 @@ export function Brands() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-cream py-10 lg:py-12 pr-6"
+              className="bg-cream py-10 lg:py-12 md:px-8 md:first:pl-0 md:last:pr-0"
             >
               <span
                 className="block w-10 h-px bg-primary"
