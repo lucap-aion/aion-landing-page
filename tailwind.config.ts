@@ -49,9 +49,14 @@ const config: Config = {
           from: { opacity: "0", transform: "translateY(16px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.7s ease-out both",
+        marquee: "marquee 60s linear infinite",
       },
     },
   },

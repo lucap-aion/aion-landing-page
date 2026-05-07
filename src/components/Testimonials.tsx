@@ -12,10 +12,14 @@ export function Testimonials() {
     { quote: t.testimonials.q3Quote, name: t.testimonials.q3Name, role: t.testimonials.q3Role },
   ];
 
-  const verified = [
-    { quote: t.testimonials.v1Quote, role: t.testimonials.v1Role },
-    { quote: t.testimonials.v2Quote, role: t.testimonials.v2Role },
+  const voices = [
+    t.testimonials.v1Quote,
+    t.testimonials.v2Quote,
+    t.testimonials.v3Quote,
+    t.testimonials.v4Quote,
   ];
+
+  const marqueeItems = [...voices, ...voices];
 
   return (
     <section id="testimonials" className="py-24 lg:py-36 bg-background">
@@ -69,41 +73,57 @@ export function Testimonials() {
           ))}
         </div>
 
+      </div>
+
+      <div className="mt-24 lg:mt-32">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8 }}
-          className="mt-24 lg:mt-32 max-w-2xl mx-auto text-center"
+          className="container max-w-6xl text-center"
         >
-          <span className="eyebrow">{t.testimonials.verifiedEyebrow}</span>
+          <span className="eyebrow">{t.testimonials.voicesEyebrow}</span>
           <h3 className="mt-4 font-serif text-3xl sm:text-4xl leading-[1.1] text-ink">
-            {t.testimonials.verifiedTitle}
+            {t.testimonials.voicesTitle}
             <span className="italic text-primary">
-              {t.testimonials.verifiedTitleAccent}
+              {t.testimonials.voicesTitleAccent}
             </span>
-            {t.testimonials.verifiedTitleTail}
+            {t.testimonials.voicesTitleTail}
           </h3>
         </motion.div>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-px bg-border border-y border-border max-w-4xl mx-auto">
-          {verified.map((v, i) => (
-            <motion.figure
-              key={v.quote}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-background py-10 lg:py-12 px-8 md:first:pl-0 md:last:pr-0"
-            >
-              <blockquote className="font-serif text-ink text-xl lg:text-[1.4rem] leading-snug italic">
-                &ldquo;{v.quote}&rdquo;
-              </blockquote>
-              <figcaption className="mt-5 text-xs uppercase tracking-[0.14em] text-ink-soft">
-                {v.role}
-              </figcaption>
-            </motion.figure>
-          ))}
+        <div
+          className="mt-12 lg:mt-14 overflow-hidden group"
+          style={{
+            maskImage:
+              "linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%)",
+          }}
+        >
+          <ul
+            className="flex w-max gap-12 lg:gap-20 animate-marquee group-hover:[animation-play-state:paused]"
+            aria-label="Client feedback"
+          >
+            {marqueeItems.map((quote, i) => (
+              <li
+                key={i}
+                className="flex-shrink-0 max-w-md lg:max-w-lg flex items-start gap-4"
+                aria-hidden={i >= voices.length}
+              >
+                <span
+                  className="font-serif text-primary text-5xl leading-none -mt-2"
+                  aria-hidden
+                >
+                  &ldquo;
+                </span>
+                <blockquote className="font-serif italic text-xl lg:text-2xl text-ink leading-snug">
+                  {quote}
+                </blockquote>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

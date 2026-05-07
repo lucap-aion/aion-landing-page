@@ -173,7 +173,7 @@ export const en = {
     q1Quote:
       "This is genius. We had so many complaints from customers paying for repairs — AION solved it overnight.",
     q1Name: "Jewelry Brand",
-    q1Role: "Chief Marketing Officer",
+    q1Role: "",
     q2Quote:
       "For a luxury brand we advised, introducing extended warranty increased registration rates double digit. AION could lead the same benefit.",
     q2Name: "Luxury Advisor",
@@ -182,15 +182,15 @@ export const en = {
       "Offering aftercare to luxury customers is the most effective lever to activate repurchase. This is guaranteed with AION.",
     q3Name: "Retail Director",
     q3Role: "",
-    verifiedEyebrow: "Verified platform feedback",
-    verifiedTitle: "Words from real ",
-    verifiedTitleAccent: "AION clients",
-    verifiedTitleTail: ".",
+    voicesEyebrow: "From the platform",
+    voicesTitle: "Words from real ",
+    voicesTitleAccent: "AION clients",
+    voicesTitleTail: ".",
     v1Quote:
       "The service is a refined attention given to the client, who feels even more protected after the sale.",
-    v1Role: "Verified client · Italy",
     v2Quote: "Excellence in service and courtesy.",
-    v2Role: "Verified client · Italy",
+    v3Quote: "Best service!",
+    v4Quote: "Thank you very much!",
   },
 
   faq: {
