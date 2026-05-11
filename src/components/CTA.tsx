@@ -49,7 +49,7 @@ export function CTA() {
                 {t.cta.ctaPrimary} <ArrowRight size={16} />
               </Button>
               <Button
-                href="https://app.aioncover.com"
+                href="https://app.aioncover.com/all"
                 variant="ghost"
                 className="!text-white hover:!text-primary-light"
               >
