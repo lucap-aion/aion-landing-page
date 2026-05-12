@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
   ArrowUpRight,
   Shield,
   Sparkles,
@@ -10,7 +9,6 @@ import {
   CheckCircle2,
   Gem,
 } from "lucide-react";
-import { Button } from "./Button";
 import { useI18n } from "./LanguageProvider";
 
 // HSL component strings (use with hsl(... / alpha) syntax)
@@ -62,15 +60,6 @@ export function Hero() {
             <p className="mt-7 max-w-xl text-lg text-ink-soft leading-relaxed">
               {t.hero.description}
             </p>
-
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Button href="https://app.aioncover.com" variant="primary">
-                {t.hero.ctaPrimary} <ArrowRight size={16} />
-              </Button>
-              <Button href="#features" variant="outline">
-                {t.hero.ctaSecondary}
-              </Button>
-            </div>
 
             <dl className="mt-14 grid grid-cols-3 gap-6 max-w-lg border-t border-border pt-8">
               {stats.map((s) => (
