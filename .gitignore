@@ -37,3 +37,7 @@ next-env.d.ts
 
 # tooling
 .claude/
+
+# others
+aion-design-system.html
+aion-design-system.pdf
