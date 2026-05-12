@@ -47,7 +47,7 @@ export function Footer() {
               ))}
               <li>
                 <a
-                  href="https://app.aioncover.com"
+                  href="https://app.aioncover.com/all"
                   className="hover:text-primary-light transition-colors"
                 >
                   {t.nav.goToPlatform}

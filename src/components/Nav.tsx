@@ -110,7 +110,7 @@ export function Nav() {
         <div className="hidden lg:flex items-center gap-3">
           <Toggles />
           <Button
-            href="https://app.aioncover.com"
+            href="https://app.aioncover.com/all"
             variant="primary"
             className="px-5 py-2.5"
           >
@@ -142,7 +142,7 @@ export function Nav() {
             ))}
             <Toggles className="pt-2" />
             <Button
-              href="https://app.aioncover.com"
+              href="https://app.aioncover.com/all"
               variant="primary"
               className="mt-2 w-full"
             >
